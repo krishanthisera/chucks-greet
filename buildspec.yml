@@ -1,0 +1,34 @@
+version: 0.2
+
+phases:
+  install:
+    on-failure: ABORT
+    runtime-versions:
+      nodejs: 16
+    commands:
+      - echo "installing dependencies"
+      - npm ci
+  pre_build:
+    on-failure: ABORT
+    commands:
+      - npm version
+  build:
+    on-failure: ABORT
+    commands:
+      - npm run build
+  post_build:
+    on-failure: ABORT
+    commands:
+      - cp dist/bundle.js public/
+artifacts:
+  files:
+    - public
+  name: build-artifacts
+  discard-paths: no
+  base-directory: public
+  enable-symlinks: no
+  s3-prefix: prefix
+
+cache:
+  paths:
+    - /root/.npm/**/*
