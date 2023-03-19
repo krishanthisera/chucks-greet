@@ -6,12 +6,13 @@ phases:
     runtime-versions:
       nodejs: 16
     commands:
-      - echo "installing dependencies"
-      - npm ci
+      - npm version
   pre_build:
     on-failure: ABORT
     commands:
       - npm version
+      - ls
+      - npm ci
   build:
     on-failure: ABORT
     commands:
