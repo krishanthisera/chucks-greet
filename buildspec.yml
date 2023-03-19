@@ -23,9 +23,9 @@ phases:
       - cp dist/bundle.js public/
 artifacts:
   files:
-    - public/*
-  name: build-artifacts
-  s3-prefix: chuckApp
+    - '**/*'
+  base-directory: 'public'
+  discard-paths: yes
 
 cache:
   paths:
