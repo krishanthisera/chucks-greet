@@ -26,7 +26,15 @@ artifacts:
     - '**/*'
   base-directory: 'public'
   discard-paths: yes
-
+  secondary-artifacts:
+    ec2-artifact:
+      files:
+        - public/
+      name:  chuck-app-ec2-artifact
+    bundle-only-artifact:
+      files:
+        - dist/
+      name:  chuck-app-bundle-only-artifact
 cache:
   paths:
     - /root/.npm/**/*
