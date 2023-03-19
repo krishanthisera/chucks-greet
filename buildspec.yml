@@ -27,11 +27,11 @@ artifacts:
   base-directory: 'public'
   discard-paths: yes
   secondary-artifacts:
-    ec2-artifact:
+    ec2:
       files:
         - public/
       name:  chuck-app-ec2-artifact
-    bundle-only-artifact:
+    bundleOnly:
       files:
         - dist/
       name:  chuck-app-bundle-only-artifact
