@@ -32,6 +32,7 @@ artifacts:
         - 'public/*'
         - 'appspec.yml'
       name:  chuck-app-ec2-artifact
+      discard-paths: yes
     bundleOnly:
       files:
         - dist/
