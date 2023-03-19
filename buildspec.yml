@@ -25,10 +25,7 @@ artifacts:
   files:
     - public
   name: build-artifacts
-  discard-paths: no
-  base-directory: public
-  enable-symlinks: no
-  s3-prefix: prefix
+  s3-prefix: chuckApp
 
 cache:
   paths:
