@@ -30,6 +30,7 @@ artifacts:
     ec2:
       files:
         - 'public/*'
+        - 'scripts/*'
         - 'appspec.yml'
       name:  chuck-app-ec2-artifact
       discard-paths: yes
