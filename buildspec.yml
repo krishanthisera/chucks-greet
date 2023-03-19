@@ -23,7 +23,7 @@ phases:
       - cp dist/bundle.js public/
 artifacts:
   files:
-    - public
+    - public/*
   name: build-artifacts
   s3-prefix: chuckApp
 
