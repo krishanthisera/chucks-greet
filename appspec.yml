@@ -12,7 +12,7 @@ permissions:
     group: apache
 hooks:
   BeforeInstall:
-    - location: scripts/install_deps.sh
+    - location: install_deps.sh
   AfterInstall:
-    - location: scripts/start_svc.sh
+    - location: start_svc.sh
       timeout: 180
