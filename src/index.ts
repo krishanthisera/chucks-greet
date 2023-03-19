@@ -8,7 +8,7 @@ if (greetingElement) {
 
     async function updateGreeting() {
         const greeting = await helloWorld.greet('Developer');
-        greetingElement.innerHTML = greeting;
+        greetingElement!.innerHTML = greeting;
     }
 
     updateGreeting();
