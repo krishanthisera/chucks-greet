@@ -1,0 +1,16 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /var/www/html/
+permissions:
+  - object: /var/www/html
+    pattern: "**"
+    owner: ec2-user
+    group: apache
+hooks:
+  BeforeInstall:
+    - location: scripts/install_deps.sh
+  AfterInstall:
+    - location: scripts/start_svc.sh
+      timeout: 180
