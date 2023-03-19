@@ -29,7 +29,7 @@ artifacts:
   secondary-artifacts:
     ec2:
       files:
-        - public/
+        - 'public/*'
       name:  chuck-app-ec2-artifact
     bundleOnly:
       files:
